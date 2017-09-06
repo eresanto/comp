@@ -10,8 +10,13 @@
   <body onload="sortTable(0)">
       @include ('layouts.nav')
 
-          @yield ('content')
+      <div class="container-fluid">
+        <div class="row">
+            @include ('layouts.sidebar')
+            @yield ('content')
+            @include ('layouts.footer')
+    </div>
+   </div>
 
-      @include ('layouts.footer')
   </body>
 </html>
