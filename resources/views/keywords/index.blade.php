@@ -5,6 +5,8 @@
         <title></title>
     </head>
     <body>
+
+Słowa kluczowe w bazie:
 <ul>
 @foreach ($keywords as $keyword)
     <li>{{ $keyword}}</li>

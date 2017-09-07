@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get('/keywords/', 'KeywordsController@index');
+
+Route::get('/keywords/create', 'KeywordsController@create');
+Route::post('/keywords', 'KeywordsController@store');
