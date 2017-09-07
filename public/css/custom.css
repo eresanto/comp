@@ -87,6 +87,14 @@ color:white;
   color:white;
 }
 
+.keyword_sm  {
+padding:5px 8px;
+color:white;
+border-radius:5px;
+display:inline-block;
+font-size:1em;
+margin:2px;
+}
 .video_sm, .foto_sm, .grafika_sm, .audio_sm, .rozlicz_sm, .it_sm, .dzienn_sm  {
 padding:5px 8px;
 color:white;

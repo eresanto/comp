@@ -9,8 +9,8 @@
       <li class="nav-item">
         <a class="nav-link">Kompetencje <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" target="_blank" href="http://150.254.67.215:8181/kalendarz_cm/calendar.php">Kalendarz</a>
+     <li class="nav-item">
+        <a class="nav-link" href="keywords/create">Dodaj słowo kluczowe</a>
       </li>
 
     </ul>
@@ -20,5 +20,3 @@
     </form>
   </div>
 </nav>
-
-    
