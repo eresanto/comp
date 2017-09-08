@@ -14,7 +14,10 @@ class KeywordsController extends Controller
      */
     public function index()
     {
-        $keywords =  \App\Keyword::get()->pluck('keyword');
+        $keywords =  \App\Keyword::get(['keyword','keyword_category'])
+        ->sortBy('keyword_category')
+        ->groupBy('keyword_category');
+
         return view('keywords.index', compact('keywords'));
     }
 
@@ -43,10 +46,12 @@ class KeywordsController extends Controller
 //        $keyword->keyword_category = request('keyword_category');
 //        $keyword->save();
 //  ekwiwalent w postaci laravela; koniecna modyfikacja w pliku klasy -> protected $fillable...
-
+        $this->validate(request(), [
+            'keyword' => 'required|max:20|unique:keywords',
+            'keyword_category' => 'required'
+        ]);
         Keyword::create(request(['keyword','keyword_category']));
-
-       return redirect('/');
+        return redirect('/keywords');
 
     }
 

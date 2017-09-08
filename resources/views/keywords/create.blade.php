@@ -10,11 +10,11 @@
     {{ csrf_field() }}
   <div class="form-group">
     <label for="exampleInputEmail1">Słowo kluczowe</label>
-    <input type="text" class="form-control" id="kw" name="keyword" placeholder="słowo kluczowe">
+    <input type="text" class="form-control" id="kw" name="keyword" placeholder="słowo kluczowe" >
   </div>
 
     <label for="exampleInputEmail1">Kategoria słowa kluczowego</label>
-  <select class="form-control" name="keyword_category">
+  <select class="form-control" name="keyword_category" >
     <option value="1">Wideo</option>
     <option value="2">Audio</option>
     <option value="3">Informatyka</option>
@@ -25,6 +25,9 @@
   <br>
   <button type="submit" class="btn btn-primary">Wprowadź</button>
 </form>
+
+
+    @include ('layouts.errors')
 
   </main>
 

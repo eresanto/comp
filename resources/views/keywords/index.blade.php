@@ -3,9 +3,18 @@
 @section ('content')
 
 Słowa kluczowe w bazie:
+
+
 <ul>
     @foreach ($keywords as $keyword)
-        <li><span class="video_sm">{{ $keyword}}</span></li>
+        <li>
+           {{ $keyword->pluck('keyword_category')->first() }}
+
+            @foreach ($keyword as $key)
+                <span class="video_sm">{{ $key->keyword }}</span>
+            @endforeach
+
+            </li>
     @endforeach
 </ul>
 
