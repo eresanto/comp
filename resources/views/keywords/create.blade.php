@@ -29,6 +29,6 @@
 
     @include ('layouts.errors')
 
-  </main>
+</main>
 
 @endsection

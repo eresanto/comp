@@ -7,3 +7,234 @@
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
+
+/*
+ * Base structure
+ */
+
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+  padding-top: 4em !important;
+}
+
+/*
+ * Typography
+ */
+
+h1 {
+  margin-bottom: 20px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eee;
+}
+
+/*
+ * Sidebar
+ */
+
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  border-right: 1px solid #eee;
+}
+
+/* Sidebar navigation */
+.sidebar {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.sidebar .nav {
+  margin-bottom: 20px;
+}
+
+.sidebar .nav-item {
+  width: 100%;
+}
+
+.sidebar .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.sidebar .nav-link {
+  border-radius: 0;
+}
+
+.navbar form {
+
+    float:right;
+    margin-top:0.5em !important;
+}
+.navbar {
+  position: fixed;
+  min-height: 50px;
+  margin-bottom: 22px;
+  border: 1px solid transparent;
+  border-radius: 0px !important;
+}
+
+/*
+ * Dashboard
+ */
+
+ /* Placeholders */
+.placeholders {
+  padding-bottom: 3rem;
+}
+
+.placeholder img {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#pracownicy tr.header, #pracownicy tr:hover {
+  background-color: lightgrey;
+}
+
+
+.circle {
+    	width: 100px;
+  	height: 100px;
+  	background: red;
+  	-moz-border-radius: 50px;
+  	-webkit-border-radius: 50px;
+  	border-radius: 50px;
+}
+
+.btn-outline-success {
+    color:   #80b3ff;
+
+    background-color: transparent;
+    background-image: none;
+    border-color:    #80b3ff;
+
+}
+
+.btn-outline-success:hover {
+    color: #fff;
+    border-color:  #1a53ff;
+    background-color: #0066ff;
+}
+
+a:hover {
+font-weight: bold;
+color: white;
+  }
+
+.all, .video, .foto, .grafika, .audio, .rozlicz, .it, .dzienn {
+  font-size: 1em;
+}
+
+.all {
+color:white;
+background-color: #555;
+}
+
+
+.video {
+background-color:#002db3;
+color:white;
+}
+
+.foto {
+background-color:#1a53ff;
+color:white;
+}
+
+.grafika {
+background-color:#0039e6;
+color:white;
+}
+
+.audio {
+background-color:orange;
+color:white;
+}
+
+.rozlicz {
+background-color:green;
+color:white;
+}
+
+.dzienn {
+background-color:purple;
+color:white;
+}
+
+.it {
+  background-color: #ff3333;
+  color:white;
+}
+
+.keyword_sm  {
+padding:5px 8px;
+color:white;
+border-radius:5px;
+display:inline-block;
+font-size:1em;
+margin:2px;
+}
+.video_sm, .foto_sm, .grafika_sm, .audio_sm, .rozlicz_sm, .it_sm, .dzienn_sm  {
+padding:5px 8px;
+color:white;
+border-radius:5px;
+display:inline-block;
+font-size:1em;
+margin:2px;
+}
+
+.dzienn_sm {
+background-color: purple;
+}
+
+
+.audio_sm {
+background-color: orange;
+}
+
+.it_sm {
+background-color: #ff3333;
+}
+
+.video_sm {
+background-color:#002db3;
+}
+
+.grafika_sm {
+background-color:#0039e6;
+}
+
+.foto_sm {
+background-color:#1a53ff;
+}
+
+.rozlicz_sm {
+background-color:green;
+}
+
+
+.active {
+  background-color: #ddd;
+    color:#fff;
+    padding-left:0px;
+    border-left:1em solid red;
+	font-weight:bold;
+}
+
+.sidebar {
+  font-size: 1.2em;
+}
