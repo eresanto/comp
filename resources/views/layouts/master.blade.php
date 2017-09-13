@@ -13,6 +13,7 @@
 
             @yield ('content')
             @include ('layouts.footer')
+            @yield ('custom_js')
     </div>
    </div>
 

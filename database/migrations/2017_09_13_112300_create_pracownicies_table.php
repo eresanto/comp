@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKeywordCategoriesTable extends Migration
+class CreatePracowniciesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,14 @@ class CreateKeywordCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('keyword_categories', function (Blueprint $table) {
+        Schema::create('pracownicies', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('category');
+            $table->string('name');
+            $table->string('surname');
+            $table->string('section');
+            $table->string('tel');
+            $table->string('email')->unique();
+            $table->timestamps();
         });
     }
 
@@ -26,6 +31,6 @@ class CreateKeywordCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('keyword_categories');
+        Schema::dropIfExists('pracownicies');
     }
 }

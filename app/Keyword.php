@@ -5,9 +5,9 @@ namespace App;
 class Keyword extends Model
 {
 
-    public function users()
+    public function pracownicy()
     {
-        return $this->belongsToMany('App\User');
+        return $this->belongsToMany('App\Pracownicy');
 
     }
 }

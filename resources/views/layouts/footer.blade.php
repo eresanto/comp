@@ -6,3 +6,6 @@
 
 <script src="js/custom.js"></script>
 <script src="https://use.fontawesome.com/7951a5d238.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js" integrity="sha256-19J3rT3tQdidgtqqdQ3xNu++Gd7EoP/ag/0x1lHi0xY=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/i18n/defaults-pl_PL.min.js" integrity="sha256-0HI2O8pn/tIm4MuzhLUXEv3N6blPmuB85xkLKIMoCrU=" crossorigin="anonymous"></script>

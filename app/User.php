@@ -28,8 +28,5 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public function keywords()
-    {
-      return $this->belongsToMany('App\Keyword');
-    }
+
 }

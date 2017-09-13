@@ -17,8 +17,8 @@
         <li class="nav-item dropdown">
                    <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pracownicy</a>
                    <div class="dropdown-menu" aria-labelledby="dropdown01">
-                     <a class="dropdown-item" href="/keywords/create">Dodaj pracownika</a>
-                     <a class="dropdown-item" href="/keywords">Edytuj pracowników</a>
+                     <a class="dropdown-item" href="/pracownicy/create">Dodaj pracownika</a>
+                     <a class="dropdown-item" href="/pracownicy">Edytuj pracowników</a>
                    </div>
           </li>
 
