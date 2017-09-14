@@ -9,13 +9,13 @@
       @include ('layouts.nav')
 
       <div class="container-fluid">
-        <div class="row">
+
 
             @yield ('content')
             @include ('layouts.footer')
             @yield ('custom_js')
     </div>
-   </div>
+   
 
   </body>
 </html>

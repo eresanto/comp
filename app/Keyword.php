@@ -10,4 +10,5 @@ class Keyword extends Model
         return $this->belongsToMany('App\Pracownicy');
 
     }
+
 }

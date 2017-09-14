@@ -12,6 +12,13 @@ class KeywordsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __constructor()
+     {
+         $this->middleware('auth')->except(['index']);
+     }
+
+
     public function index()
     {
         $keywords =  \App\Keyword::get(['keyword','keyword_category'])
@@ -39,20 +46,12 @@ class KeywordsController extends Controller
      */
     public function store(Request $request)
     {
-
-    //    $keyword = new \App\Keyword;
-
-//        $keyword->keyword = request('keyword');
-//        $keyword->keyword_category = request('keyword_category');
-//        $keyword->save();
-//  ekwiwalent w postaci laravela; koniecna modyfikacja w pliku klasy -> protected $fillable...
         $this->validate(request(), [
             'keyword' => 'required|max:20|unique:keywords',
             'keyword_category' => 'required'
         ]);
         Keyword::create(request(['keyword','keyword_category']));
         return redirect('/keywords');
-
     }
 
     /**

@@ -4,8 +4,10 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
+    @if (Auth::check())
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
+      <ul class="nav">
       <li class="nav-item dropdown">
                  <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Słowa kluczowe</a>
                  <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -21,11 +23,28 @@
                      <a class="dropdown-item" href="/pracownicy">Edytuj pracowników</a>
                    </div>
           </li>
+          <li class="nav-item dropdown">
 
-    </ul>
-    <form class="form-inline mt-2 mt-md-0">
-      <input id="myInput" onkeyup="myFunction()"  class="form-control mr-sm-2" type="text" placeholder="np. montaż" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
-    </form>
+               <a href="/logout" class="nav-link dropdown"><span class="glyphicon glyphicon-log-out"></span> wyloguj</a>
+           </li>
+      </ul>
   </div>
+    @endif
+
+    @if (!Auth::check())
+     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+         <ul class="nav">
+             <li class="nav-item dropdown">
+                 <a href="/login" class="nav-link dropdown"><span class="glyphicon glyphicon-log-in"></span> login</a>
+             </li>
+         </ul>
+     </div>
+    @endif
+
+    <form class="form-inline col-sm-3">
+      <input id="myInput" onkeyup="myFunction()"  class="form-control" type="text" placeholder="np. montaż" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Szukaj</button>
+    </form>
+
+</div>
 </nav>
