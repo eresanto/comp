@@ -87,4 +87,15 @@ class PracownicyController extends Controller
         return redirect('/pracownicy');
      }
 
+     public function destroy_key(Request $request, $id)
+     {
+
+        \DB::table('keyword_pracownicy')->destroy(
+             ['pracownicy_id' => $id, 'keyword_id' => $request ]
+         );
+
+
+        return redirect('/pracownicy');
+     }
+
 }

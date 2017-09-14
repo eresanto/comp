@@ -8,8 +8,8 @@
         <tr>
           <th style="width:15%;">Imię i nazwisko </th>
               <th style="width:10%;" onclick="sortTable(1)">Sekcja <i class="fa fa-sort" aria-hidden="true"></i></th>
-          <th style="width:40%;">Obszary działania</th>e
-              <th style="width:30%;">Kontakt</th>
+          <th style="width:50%;">Obszary działania</th>e
+              <th style="width:20%;">Kontakt</th>
         </tr>
       </thead>
     <tbody>
@@ -36,9 +36,13 @@
                       {!! csrf_field() !!}
               </form>
 
-
              @foreach ($pracownik->keywords as $key)
-                <div class=video_sm>{{ $key->keyword }} </div>
+                <div class=video_sm>{{ $key->keyword }}
+                    {{ $keyword['id'] }}
+                            <button class="glyphicon glyphicon-trash" data-id="{{ $pracownik->id }}" data-token="{{ csrf_token() }}" >
+                            </button>
+                            <input type="hidden" name="_method" value="delete" />
+                 </div>
              @endforeach
          </td>
         <td> {{ $pracownik->email }} {{ $pracownik->tel }}   </td>

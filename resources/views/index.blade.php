@@ -1,7 +1,10 @@
 @extends ('layouts.master')
 
+<div class="row">
 @section ('content')
+    <div class="row">
 @include ('layouts.sidebar')
+
 <main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
 
   <section class="row text-center placeholders">
@@ -137,5 +140,5 @@
     </table>
   </div>
 </main>
-
+</div>
 @endsection
