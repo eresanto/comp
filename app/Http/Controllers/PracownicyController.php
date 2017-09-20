@@ -65,9 +65,9 @@ class PracownicyController extends Controller
              $exists = \DB::table('keyword_pracownicy')->where(['pracownicy_id' => $id, 'keyword_id' => $key])->first();
 
              if (is_null($exists))
-+                {
-+                   \DB::table('keyword_pracownicy')->insert(['pracownicy_id' => $id, 'keyword_id' => $key ]);
-+                }
+                {
+                   \DB::table('keyword_pracownicy')->insert(['pracownicy_id' => $id, 'keyword_id' => $key ]);
+                }
         }
      // return a view
          return redirect('/pracownicy');
