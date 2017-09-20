@@ -22,6 +22,8 @@ Route::post('/keywords', 'KeywordsController@store');
 Route::get('/pracownicy/', 'PracownicyController@index');
 Route::get('/pracownicy/create', 'PracownicyController@create');
 Route::post('/pracownicy', 'PracownicyController@store');
+
 Route::delete('/pracownicy/del/{id}', 'PracownicyController@destroy');
-Route::delete('/pracownicy/delkey/{id}', 'PracownicyController@destroy_key');
 Route::post('/pracownicy/add/{id}', 'PracownicyController@update');
+
+Route::post('/pracownicy/delkey/{id}', 'PracownicyController@destroy_key');

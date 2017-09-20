@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Pracownicy;
+use App\Keyword;
 use DB;
 
 class PracownicyController extends Controller
@@ -60,17 +61,18 @@ class PracownicyController extends Controller
      {
         $klucz = $request['keyword'];
 
-        foreach ($klucz as $key) {
-        //$istniejace = \DB::table('keyword_pracownicy')->where(['pracownicy_id' => $id, 'keyword_id' => $key ]);
+            foreach ($klucz as $key) {
 
+            $exists = \DB::table('keyword_pracownicy')->where(['pracownicy_id' => $id, 'keyword_id' => $key])->first();
 
-                 \DB::table('keyword_pracownicy')->insert(
-                     ['pracownicy_id' => $id, 'keyword_id' => $key ]
-                 );
+                if (is_null($exists))
+                {
+                   \DB::table('keyword_pracownicy')->insert(['pracownicy_id' => $id, 'keyword_id' => $key ]);
+                }
+            }
 
-        }
      // return a view
-         return redirect('/pracownicy');
+        return redirect('/pracownicy');
      }
 
      /**
@@ -79,21 +81,16 @@ class PracownicyController extends Controller
       * @param  int  $id
       * @return \Illuminate\Http\Response
       */
-     public function destroy(Request $request, $id)
+     public function destroy($id)
      {
-
-        Pracownicy::destroy($id);
+        \App\Pracownicy::find($id)->delete();
 
         return redirect('/pracownicy');
      }
 
      public function destroy_key(Request $request, $id)
      {
-
-        \DB::table('keyword_pracownicy')->destroy(
-             ['pracownicy_id' => $id, 'keyword_id' => $request ]
-         );
-
+         DB::table('keyword_pracownicy')->where(['pracownicy_id' => $id, 'keyword_id' => $request['key']])->delete();
 
         return redirect('/pracownicy');
      }
